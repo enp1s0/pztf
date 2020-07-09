@@ -1,8 +1,3 @@
-# Utils for PEZY-SCx processors
-Header only PZCL utility livbrary
-
-## Example
-```cpp
 #include <vector>
 #include <CL/cl.hpp>
 #include <pztf/error.hpp>
@@ -30,4 +25,3 @@ int main() {
 
 	delete [] hA;
 }
-```
