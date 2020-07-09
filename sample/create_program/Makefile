@@ -1,7 +1,7 @@
 PZSDK_PATH?=/opt/pzsdk.ver5.0
 DEFAULT_MAKE=$(PZSDK_PATH)/make/default_pzcl_host.mk
 
-TARGET=example_test
+TARGET=create_program_test
 CPPSRC=main.cpp
 CCOPT=-O2 -Wall -D__LINUX__ -DNDEBUG -std=c++11 -I../../
 
