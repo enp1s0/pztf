@@ -2,8 +2,6 @@
 #include <CL/cl.hpp>
 #include <pztf/create_program.hpp>
 
-constexpr std::size_t N = 1lu << 10;
-
 int main() {
 	std::vector<cl::Platform> platforms;
 	cl::Platform::get(&platforms);
