@@ -11,11 +11,11 @@ int main() {
 
 	std::vector<cl::Device> devices;
 	platform.getDevices(CL_DEVICE_TYPE_DEFAULT, &devices);
-	cl_device = devices[0];
+	auto cl_device = devices[0];
 
-	cl_context = cl::Context(cl_device);
+	auto cl_context = cl::Context(cl_device);
 
-	cl_queue = cl::CommandQueue(cl_context, cl_device, CL_QUEUE_PROFILING_ENABLE);
+	auto cl_queue = cl::CommandQueue(cl_context, cl_device, CL_QUEUE_PROFILING_ENABLE);
 
 	auto dA = cl::Buffer(cl_context, CL_MEM_READ_WRITE, sizeof(double) * N);
 	auto hA = new double [N];
