@@ -4,11 +4,11 @@
 #include <vector>
 #include <pzcl/pzcl.h>
 
-#ifndef PZCL_CHECK_ERROR
-#define PZCL_CHECK_ERROR(status) pztf::error::pzcl_check_error(status, __FILE__, __LINE__, __func__)
+#ifndef PZTF_CHECK_ERROR
+#define PZTF_CHECK_ERROR(status) pztf::error::pzcl_check_error(status, __FILE__, __LINE__, __func__)
 #endif
-#ifndef PZCL_CHECK_ERROR_M
-#define PZCL_CHECK_ERROR_M(status, message) pztf::error::pzcl_check_error(status, __FILE__, __LINE__, __func__, message)
+#ifndef PZTF_CHECK_ERROR_M
+#define PZTF_CHECK_ERROR_M(status, message) pztf::error::pzcl_check_error(status, __FILE__, __LINE__, __func__, message)
 #endif
 
 namespace pztf {
