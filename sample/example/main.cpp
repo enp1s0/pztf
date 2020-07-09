@@ -1,5 +1,4 @@
 #include <vector>
-#include <CL/cl.hpp>
 #include <pztf/error.hpp>
 #include <pztf/create_program.hpp>
 #include <pztf/work_size.hpp>
@@ -29,7 +28,7 @@ int main() {
 	const auto program = pztf::create_program(cl_context, cl_device, "pzcl_kernel/kernel.pz");
 
 	// Getting Global Work Size
-	const auto global_work_size = pztf::get_global_work_size(device);
+	const auto global_work_size = pztf::get_global_work_size(cl_device);
 
 	delete [] hA;
 }
