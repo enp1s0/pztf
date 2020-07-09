@@ -3,6 +3,7 @@
 #include <fstream>
 #include <stdexcept>
 #include <vector>
+#include <CL/cl.hpp>
 #include <pzcl/pzcl.h>
 
 namespace pztf {

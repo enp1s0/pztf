@@ -1,5 +1,6 @@
 #ifndef __PZTF_FORK_SIZE_HPP__
 #define __PZTF_FORK_SIZE_HPP__
+#include <CL/cl.hpp>
 #include <pzcl/pzcl.h>
 
 namespace pztf {
