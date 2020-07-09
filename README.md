@@ -4,8 +4,9 @@ Header only PZCL utility livbrary
 ## Example
 ```cpp
 #include <vector>
-#include <CL/cl.hpp>
 #include <pztf/error.hpp>
+#include <pztf/create_program.hpp>
+#include <pztf/work_size.hpp>
 
 constexpr std::size_t N = 1lu << 10;
 
@@ -27,6 +28,12 @@ int main() {
 
 	PZTF_CHECK_ERROR(cl_queue.enqueueReadBuffer(dA, true, 0, sizeof(double) * N, hA));
 	cl_queue.finish();
+
+	// Creating program
+	const auto program = pztf::create_program(cl_context, cl_device, "pzcl_kernel/kernel.pz");
+
+	// Getting Global Work Size
+	const auto global_work_size = pztf::get_global_work_size(cl_device);
 
 	delete [] hA;
 }
