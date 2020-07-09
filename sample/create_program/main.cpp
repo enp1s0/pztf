@@ -18,6 +18,4 @@ int main() {
 	auto cl_queue = cl::CommandQueue(cl_context, cl_device, CL_QUEUE_PROFILING_ENABLE);
 
 	const auto program = pztf::create_program(cl_context, cl_device, "pzcl_kernel/kernel.pz");
-
-	delete [] hA;
 }
