@@ -10,7 +10,7 @@ namespace pztf {
 inline cl::Program create_program(cl::Context& context, const cl::Device& device, const std::string& filename) {
 	std::ifstream ifs(filename, std::ios::in | std::ios::binary);
 	if(!ifs) {
-		throw std::runtime_error("No such a file : " + filename);
+		throw std::runtime_error("No such file : " + filename);
 	}
 
 	ifs.seekg(0, std::ios::end);
